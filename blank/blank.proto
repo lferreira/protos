@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package blank.protobuf.example;
+
+option go_package = "github.com/lferreira/protos/blank:blank";
+
+
+service Blank {
+
+  rpc Hello(HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string complete = 1;
+}
